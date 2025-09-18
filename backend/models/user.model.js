@@ -7,23 +7,23 @@ const UserSchema = new mongoose.Schema({
         require: true
     },
     email: {
-        type: string,
+        type: String,
         require: true
     },
     mobileNumber: {
-        type: string,
+        type: String,
         require: true
     },
     password: {
-        type: string,
+        type: String,
     },
     role: {
-        type: string,
-        enum : ["user","owner","delivryboy"],
+        type: String,
+        enum : ["user","owner","deliveryboy"],
          require: true
     }
 }, { timeseries: true })
 
 const User = mongoose.model("User",UserSchema)
 
-export default User
+export default User ;
